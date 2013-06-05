@@ -36,7 +36,6 @@ class User extends BaseUser implements TimestampableInterface
 
     public function __construct()
     {
-        $this->createdAt = new DateTime();
         $this->orders    = new ArrayCollection();
         $this->addresses = new ArrayCollection();
 
