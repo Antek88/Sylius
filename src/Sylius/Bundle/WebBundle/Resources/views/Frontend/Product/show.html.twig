@@ -1,5 +1,9 @@
 {% extends 'SyliusWebBundle:Frontend:layout.html.twig' %}
 
+{%- block title -%}
+    {{ parent() }} | {{ product.name|truncate(20) }}
+{%- endblock -%}
+
 {% set form = sylius_cart_form({'product': product}) %}
 
 {% block content %}
